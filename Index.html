@@ -29,6 +29,17 @@
           </a>
         </form>
       </div>
-      <script src="js/main.js"></script>
+      <script>
+
+if (typeof(Storage) !== 'undefined') {
+
+  localStorage.setItem('username', '1');
+  localStorage.setItem('passworld', '2');
+
+} else {   
+  alert('LocalStorage không hỗ trợ trên trình duyệt này!!');
+}
+
+      </script>
 </body>
 </html>
