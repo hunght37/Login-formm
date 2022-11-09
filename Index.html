@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="descripsion">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" type="text/css" href="index1.css">
 </head>
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Username</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" required="">
-            <label>Password</label>
-          </div>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
       </div>
-      <script>
-
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
+</div>
+<script>
+var  userName = 'hung030708';
+var  password = 'hunght37';
 if (typeof(Storage) !== 'undefined') {
 
-  localStorage.setItem('username', '1');
-  localStorage.setItem('passworld', '2');
+localStorage.setItem('username', 'hung030708');
+localStorage.setItem('passworld', 'hunght37');
 
 } else {   
-  alert('LocalStorage không hỗ trợ trên trình duyệt này!!');
+alert('LocalStorage không hỗ trợ trên trình duyệt này!!');
+}
+if ( typeof(Storage) !== "undefined") ;
+function validate(){
+var username = document.getElementById("userName").value;
+var password = document.getElementById("password").value;
+if ( username == "Formget" && password == "formget#123"){
+alert ("Login successfully");
+window.location = "index2.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
 }
 
-      </script>
+</script>
 </body>
 </html>
